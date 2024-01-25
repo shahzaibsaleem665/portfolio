@@ -17,37 +17,39 @@ function Navbar() {
     setOpenMenu(!openMenu);
   }
 
- 
+  const handleMenuClose = () => {
+    setOpenMenu(false);
+  };
 
   return (
     <div className='navbar'>
-          <AppBar color='inherit' >
+          <AppBar color='inherit' sx={{borderBottom: '1px solid lightgray', boxShadow: 'none',
+        position:'sticky', height:'70px', justifyContent: 'center'}} >
           <Toolbar>
             <IconButton size='large' edge='start' color='inherit' aria-label='menu'  onClick={MenuHandle} >
-              <MenuIcon />
+              <MenuIcon sx={{fontSize: '30px'}} />
             </IconButton>
-           <img src={logo} alt='my logo' height='50' 
+           <img src={logo} alt='my logo' height='60px' 
            />
         <Box sx={{flexGrow: 1}} />
-           <Box sx={{ marginLeft: 'auto', display: { xs: 'none', md: 'flex' } }}>
-            <Button color='inherit'>
+           <Box sx={{ marginLeft: 'auto', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
+            <Button  className='nav__button'>
               Home
             </Button>
-            <Button color='inherit'>
+            <Button className='nav__button'>
               About
             </Button>
-            <Button color='inherit'>
+            <Button  className='nav__button'>
               Contact
             </Button>
-            <Button color='inherit'>
+            <Button  className='nav__button'>
               Projects
             </Button>
            </Box>
            <Avatar className='avatar' src={profile} />
 
-           <Box sx={{ marginLeft: 'auto', display: { xs: 'flex', md: 'none' }}}>
-           
-         <Menu open={openMenu}>
+           <Box sx={{ display: { xs: 'flex', md: 'none' }}}>
+         <Menu open={openMenu && window.innerWidth <= 600}onClick={handleMenuClose}>
             <MenuItem color='inherit'>
               Home
             </MenuItem>
