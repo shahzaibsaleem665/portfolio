@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -8,6 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Avatar, Menu, MenuItem } from '@mui/material';
 import profile from '../assets/pictures/profile.jpg'
 import logo from '../assets/logos/logo.png'
+import CloseIcon from '@mui/icons-material/Close';
 import './Navbar.css'
 
 function Navbar() {
@@ -26,15 +27,24 @@ function Navbar() {
           <AppBar color='inherit' sx={{borderBottom: '1px solid lightgray', boxShadow: 'none',
         position:'sticky', height:'70px', justifyContent: 'center'}} >
           <Toolbar>
-            <IconButton size='large' edge='start' color='inherit' aria-label='menu'  onClick={MenuHandle} >
-              <MenuIcon sx={{fontSize: '30px'}} />
+            <IconButton size='medium' edge='start' color='inherit' aria-label='menu'  onClick={MenuHandle} sx={{ display:{xs:'flex', sm: 'none', md:'none'}, marginLeft: {xs:'30px'}}} >
+
+            {openMenu ? <CloseIcon sx={{fontSize: '30px', ':hover': { // conditinally rendering the ICons based on state of the Menu. 
+                    cursor: 'pointer'}}} onClick={handleMenuClose} />
+             : <MenuIcon sx={{fontSize: '30px', ':hover':{ cursor: 'pointer'}}} />}
             </IconButton>
-           <img src={logo} alt='my logo' height='60px' 
+            <Box sx={{paddingLeft: { xs:'0px', sm:'50px', md:'70px' }, display:{ xs: 'flex', sm: 'flex', md:'flex'}, margin: '0px'}}>
+              <img src={logo} alt='my logo' height='60px'  
            />
-        <Box sx={{flexGrow: 1}} />
+           </Box>
+           
+           <Typography  sx={{fontFamily:'Syne Mono, monospace', fontSize:'25px', fontWeight:'bold', display:{xs:'none', sm:'none', md:'flex'}}}>
+            Shahzaib Saleem
+           </Typography>
+           <Box sx={{flexGrow: 1}} />
            <Box sx={{ marginLeft: 'auto', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
             <Button  className='nav__button'>
-              Home
+              Work
             </Button>
             <Button className='nav__button'>
               About
@@ -43,15 +53,17 @@ function Navbar() {
               Contact
             </Button>
             <Button  className='nav__button'>
-              Projects
+              Skills
             </Button>
            </Box>
-           <Avatar className='avatar' src={profile} />
+           <Avatar src={profile} sx={{marginRight:{xs:'40px', sm:'50px', md:'80px'}}} />
 
-           <Box sx={{ display: { xs: 'flex', md: 'none' }}}>
-         <Menu open={openMenu && window.innerWidth <= 600}onClick={handleMenuClose}>
+           <Box sx={{ display: { xs: 'flex', md: 'none' }}} onClick={handleMenuClose}>
+
+
+         <Menu open={openMenu && window.innerWidth <= 600}>
             <MenuItem color='inherit'>
-              Home
+              Work
             </MenuItem>
             <MenuItem color='inherit'>
               About
@@ -60,7 +72,7 @@ function Navbar() {
               Contact
             </MenuItem>
             <MenuItem color='inherit'>
-              Projects
+              Skills
             </MenuItem>
             </Menu>
        

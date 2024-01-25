@@ -1,4 +1,19 @@
+/* Home.css */
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.home__image {
+  height: 300px;
+  width: auto;
+  margin-left: 20px; /* Adjust margin for better spacing */
 }
