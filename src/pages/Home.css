@@ -23,5 +23,6 @@
   .home__profile {
     height: 200px;
     width: auto;
+    margin-right: 60px;
   }
 }

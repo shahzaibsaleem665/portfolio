@@ -10,16 +10,18 @@ import profile from '../assets/pictures/profile.jpg'
 import logo from '../assets/logos/logo.png'
 import CloseIcon from '@mui/icons-material/Close';
 import './Navbar.css'
+import menuBg from '../assets/logos/menuBg.svg'
 
 function Navbar() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const openMenu = Boolean(anchorEl);
 
-  const MenuHandle = () => {
-    setOpenMenu(!openMenu);
-  }
+  const MenuHandle = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
   const handleMenuClose = () => {
-    setOpenMenu(false);
+    setAnchorEl(null);
   };
 
   return (
@@ -34,7 +36,7 @@ function Navbar() {
              : <MenuIcon sx={{fontSize: '30px', ':hover':{ cursor: 'pointer'}}} />}
             </IconButton>
             <Box sx={{paddingLeft: { xs:'0px', sm:'50px', md:'70px' }, display:{ xs: 'flex', sm: 'flex', md:'flex'}, margin: '0px'}}>
-              <img src={logo} alt='my logo' height='60px'  
+              <img src={logo} alt='my logo' height='60px' style={{cursor: 'pointer'}}
            />
            </Box>
            
@@ -56,23 +58,53 @@ function Navbar() {
               Skills
             </Button>
            </Box>
-           <Avatar src={profile} sx={{marginRight:{xs:'40px', sm:'50px', md:'80px'}}} />
+           <Avatar src={profile} sx={{marginRight:{xs:'40px', sm:'50px', md:'80px'}, ':hover' :{cursor: 'pointer'}}} />
 
            <Box sx={{ display: { xs: 'flex', md: 'none' }}} onClick={handleMenuClose}>
 
+           <Menu
+              anchorEl={anchorEl}
+              open={openMenu}
+              onClose={handleMenuClose}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'center',
+               
+              }}
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'center',
+                
+              }}
+              PaperProps={{
+                sx: {
+                  width: '100%',
+                  paddingTop: '10px',
+                  marginTop: '11px',
+                  backgroundImage:`url(${menuBg})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition:'center',
 
-         <Menu open={openMenu && window.innerWidth <= 600}>
-            <MenuItem color='inherit'>
-              Work
+                  },
+              }}
+              
+            >
+            <MenuItem sx={{fontFamily:'poppins',
+            justifyContent:'center',
+          fontWeight:'bold', ':hover':{color:'#51DFDC'}}}
+            >Work
             </MenuItem>
-            <MenuItem color='inherit'>
-              About
+            <MenuItem sx={{fontFamily:'poppins',
+            justifyContent:'center',  fontWeight:'bold', ':hover':{color:'#51DFDC'}}}>
+            About
             </MenuItem>
-            <MenuItem color='inherit'>
-              Contact
+            <MenuItem sx={{fontFamily:'poppins',
+            justifyContent:'center',  fontWeight:'bold', ':hover':{color:'#51DFDC'}}}>
+            Contact
             </MenuItem>
-            <MenuItem color='inherit'>
-              Skills
+            <MenuItem sx={{fontFamily:'poppins',
+            justifyContent:'center',  fontWeight:'bold', ':hover':{color:'#51DFDC'}}}>
+            Skills
             </MenuItem>
             </Menu>
        

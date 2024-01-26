@@ -11,7 +11,7 @@ function Home() {
   return (
     <div className='home'>
       <Navbar />
-      <Box sx={{backgroundImage:`url(${background})`,
+    <Box sx={{backgroundImage:`url(${background})`,
      backgroundRepeat: "no-repeat",
      backgroundSize: "cover",
      height: "385px",
