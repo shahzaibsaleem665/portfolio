@@ -78,12 +78,13 @@ function Navbar() {
               }}
               PaperProps={{
                 sx: {
-                  width: '100%',
+                  width: '80%',
                   paddingTop: '10px',
                   marginTop: '11px',
                   backgroundImage:`url(${menuBg})`,
                   backgroundSize: 'cover',
                   backgroundPosition:'center',
+                  marginLeft: '40px'
 
                   },
               }}
