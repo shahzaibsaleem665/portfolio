@@ -1,7 +1,8 @@
 // Home.jsx
 import React from 'react';
 import './Home.css';
-import home from '../assets/logos/home.svg';
+import background from '../assets/logos/background.svg';
+import shahzaib from '../assets/pictures/shahzaib.png'
 import Navbar from './Navbar';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/material';
@@ -10,19 +11,25 @@ function Home() {
   return (
     <div className='home'>
       <Navbar />
-      <div className="home__container">
-        <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}>
-          <div className="home__containerText">
-            <Typography variant="h4">
+      <Box sx={{backgroundImage:`url(${background})`,
+     backgroundRepeat: "no-repeat",
+     backgroundSize: "cover",
+     height: "385px",
+     zIndex:'-1',
+     display:'flex',
+     alignItems:'center',
+     justifyContent:'center',
+     width:'100vw'}}>
+      <Box sx={{backgroundColor:'transparent', width:'100%', padding:'20px', fontFamily:'poppins'}}>
+      <Typography variant="h4" color='inherit' sx={{padding:'15px', fontSize:{xs:'40px', sm:'45px', md:'50px'} }} >
               Hi, I am Shahzaib Saleem
-            </Typography>
-            <Typography variant="body1">
-              "Passionate Frontend React Developer dedicated to creating exceptional user experiences. With a keen eye for design and a commitment to clean, efficient code, I specialize in turning ideas into responsive and engaging web applications. Let's bring your vision to life through the power of React and modern web technologies."
-            </Typography>
-          </div>
-          <img src={home} alt='Home Background' className="home__image" />
+        </Typography>
+        <Typography variant="body1" color='inherit' sx={{padding:'15px', fontSize:'20px'}}>
+              "Passionate Frontend React Developer dedicated to creating exceptional user experiences.
+        </Typography>
         </Box>
-      </div>
+        <img src={shahzaib} className='home__profile' />
+      </Box>
     </div>
   );
 }

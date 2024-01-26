@@ -1,19 +1,27 @@
 /* Home.css */
-
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@900&display=swap');
 * {
   margin: 0;
   padding: 0;
 }
 
-.home__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; /* Add padding for better spacing */
-}
-
-.home__image {
+.home__profile {
   height: 300px;
   width: auto;
-  margin-left: 20px; /* Adjust margin for better spacing */
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
+  background-color: black;
+  margin-right: 80px;
+   /* Adjust margin for better spacing */
+}
+@media screen and (max-width:900px) {
+  .home__profile {
+    height: 250px;
+  width: auto;
+  }
+}
+@media screen and (max-width:600px) {
+  .home__profile {
+    height: 200px;
+    width: auto;
+  }
 }
