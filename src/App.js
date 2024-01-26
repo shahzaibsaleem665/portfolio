@@ -1,3 +1,9 @@
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link,
+} from "react-router-dom";
 import './App.css';
 import Home from './pages/Home';
 
@@ -5,9 +11,16 @@ import Home from './pages/Home';
 function App() {
   return (
     // define the path using router path='/' for home page
-    <div className="App">
-     <Home />
+    <Router>
+    <div className="app">
+      <Switch>
+        <Route path='/'>
+        <Home />
+        </Route>
+      </Switch>
+     
     </div>
+    </Router>
   );
 }
 

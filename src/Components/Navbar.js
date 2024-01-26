@@ -10,12 +10,21 @@ import profile from '../assets/pictures/profile.jpg'
 import logo from '../assets/logos/logo.png'
 import CloseIcon from '@mui/icons-material/Close';
 import './Navbar.css'
-import menuBg from '../assets/logos/menuBg.svg'
+import menuBg from '../assets/logos/menuBg.svg';
+import { Link } from 'react-router-dom/cjs/react-router-dom';
+
+const buttonValues = ['Work', 'About', 'Contact', 'Skills'];
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const openMenu = Boolean(anchorEl);
 
+
+  const [selectedButton, setSelectedButton] = useState('');
+
+  const handleButtonClick = (value) => {
+    setSelectedButton(value);
+  };
   const MenuHandle = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -36,8 +45,10 @@ function Navbar() {
              : <MenuIcon sx={{fontSize: '30px', ':hover':{ cursor: 'pointer'}}} />}
             </IconButton>
             <Box sx={{paddingLeft: { xs:'0px', sm:'50px', md:'70px' }, display:{ xs: 'flex', sm: 'flex', md:'flex'}, margin: '0px'}}>
+              <Link to='/'>
               <img src={logo} alt='my logo' height='60px' style={{cursor: 'pointer'}}
            />
+           </Link>
            </Box>
            
            <Typography  sx={{fontFamily:'Syne Mono, monospace', fontSize:'25px', fontWeight:'bold', display:{xs:'none', sm:'none', md:'flex'}}}>
@@ -45,19 +56,30 @@ function Navbar() {
            </Typography>
            <Box sx={{flexGrow: 1}} />
            <Box sx={{ marginLeft: 'auto', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
-            <Button  className='nav__button'>
-              Work
-            </Button>
-            <Button className='nav__button'>
-              About
-            </Button>
-            <Button  className='nav__button'>
-              Contact
-            </Button>
-            <Button  className='nav__button'>
-              Skills
-            </Button>
-           </Box>
+      {buttonValues.map((value) => (
+        
+        <Link key={value} to={`/${value.toLowerCase()}`} >
+          <Button
+          value={value}
+          className={`nav__button ${selectedButton === value ? 'selected' : ''}`}
+          onClick={() => handleButtonClick(value)}
+          sx={{
+            marginRight: '10px',
+            fontFamily: 'Syne Mono',
+            fontSize: '16px',
+            backgroundColor: selectedButton === value ? '#58B4E2' : 'inherit',
+            color: selectedButton === value ? 'black' : 'black',
+            '&:hover': {
+              backgroundColor: selectedButton === value ? '#58B4E2' : 'transparent',
+              fontWeight: 'bold'
+            },
+          }}
+        >
+          {value}
+        </Button>
+        </Link>
+      ))}
+    </Box>
            <Avatar src={profile} sx={{marginRight:{xs:'40px', sm:'50px', md:'80px'}, ':hover' :{cursor: 'pointer'}}} />
 
            <Box sx={{ display: { xs: 'flex', md: 'none' }}} onClick={handleMenuClose}>
@@ -84,29 +106,22 @@ function Navbar() {
                   backgroundImage:`url(${menuBg})`,
                   backgroundSize: 'cover',
                   backgroundPosition:'center',
-                  marginLeft: '40px'
+                  marginLeft: '40px',
 
                   },
               }}
               
             >
-            <MenuItem sx={{fontFamily:'poppins',
-            justifyContent:'center',
-          fontWeight:'bold', ':hover':{color:'#51DFDC'}}}
-            >Work
-            </MenuItem>
-            <MenuItem sx={{fontFamily:'poppins',
-            justifyContent:'center',  fontWeight:'bold', ':hover':{color:'#51DFDC'}}}>
-            About
-            </MenuItem>
-            <MenuItem sx={{fontFamily:'poppins',
-            justifyContent:'center',  fontWeight:'bold', ':hover':{color:'#51DFDC'}}}>
-            Contact
-            </MenuItem>
-            <MenuItem sx={{fontFamily:'poppins',
-            justifyContent:'center',  fontWeight:'bold', ':hover':{color:'#51DFDC'}}}>
-            Skills
-            </MenuItem>
+              {buttonValues.map((value) =>(
+                <Link key={value} to={`/${value.toLowerCase()}`} style={{
+                  textDecoration: 'none', color:'black'}} >
+                <MenuItem  value={value} sx={{fontFamily:'Syne mono',
+                justifyContent:'center', ':hover':{color:'#51DFDC', fontWeight:'bold'}}}
+                >
+                {value}
+                </MenuItem>
+                </Link>
+              ))}
             </Menu>
        
            </Box>
