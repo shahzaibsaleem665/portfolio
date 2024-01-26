@@ -19,17 +19,18 @@ function Home() {
      display:'flex',
      alignItems:'center',
      justifyContent:'center',
-     width:'100vw'}}>
-      <Box sx={{backgroundColor:'transparent', width:'100%', padding:'20px', fontFamily:'poppins'}}>
-      <Typography variant="h4" color='inherit' sx={{padding:'15px', fontSize:{xs:'40px', sm:'45px', md:'50px'} }} >
-              Hi, I am Shahzaib Saleem
+     width:'100vw' }}>
+      <Box sx={{backgroundColor:'transparent', width:'100%', padding:'20px', marginRight:'20px', marginLeft:'20px' }}>
+      <Typography variant="h4" color='inherit' sx={{padding:'10px', fontSize:{xs:'40px', sm:'50px', md:'70px'}, fontFamily:'Segoe UI', paddingLeft:{xs:'20px', sm:'50px', md:'70px'}}} >
+              Hi, I'm <strong style={{fontFamily:'Gloria Hallelujah' , }}>Shahzaib Saleem</strong>
         </Typography>
-        <Typography variant="body1" color='inherit' sx={{padding:'15px', fontSize:'20px'}}>
-              "Passionate Frontend React Developer dedicated to creating exceptional user experiences.
+        <Typography variant="body1" color='inherit' sx={{padding:'10px', fontSize:{xs:'16px', sm:'18px', md:'20px'},fontFamily:'Syne Mono', fontWeight:'bold', paddingLeft:{xs:'20px', sm:'50px', md:'70px'}}}>
+              Passionate Frontend React Developer dedicated to creating exceptional user experiences.
         </Typography>
         </Box>
         <img src={shahzaib} className='home__profile' />
       </Box>
+    
     </div>
   );
 }
