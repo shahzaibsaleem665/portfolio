@@ -70,6 +70,7 @@ function Navbar() {
             marginRight: '10px',
             fontFamily: 'Syne Mono',
             fontSize: '16px',
+            textTransform: 'capitalize',
             backgroundColor: selectedButton === value ? '#58B4E2' : 'inherit',
             color: selectedButton === value ? 'black' : 'black',
             fontWeight: selectedButton === value ? 'bold' : '',
@@ -86,49 +87,53 @@ function Navbar() {
     </Box>
            <Avatar src={profile} sx={{marginRight:{xs:'40px', sm:'50px', md:'80px'}, ':hover' :{cursor: 'pointer'}}} />
 
-           <Box sx={{ display: { xs: 'flex', md: 'none' }}} onClick={handleMenuClose}>
-
-           <Menu
+           <Box sx={{ display: { xs: 'flex', md: 'none' } }} onClick={handleMenuClose}>
+            <Menu
               anchorEl={anchorEl}
               open={openMenu}
               onClose={handleMenuClose}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'center',
-               
               }}
               transformOrigin={{
                 vertical: 'top',
                 horizontal: 'center',
-                
               }}
               PaperProps={{
                 sx: {
-                  width: '80%',
+                  width: '60%',
                   paddingTop: '10px',
                   marginTop: '11px',
-                  backgroundImage:`url(${menuBg})`,
+                  backgroundImage: `url(${menuBg})`,
                   backgroundSize: 'cover',
-                  backgroundPosition:'center',
+                  backgroundPosition: 'center',
                   marginLeft: '40px',
-
+                  '@media (max-width:600px)': { // Responsive styling for Menu
+                    width: '60%',
                   },
+                },
               }}
-              
             >
-              {buttonValues.map((value) =>(
-                <Link key={value} to={`/${value.toLowerCase()}`} style={{
-                  textDecoration: 'none', color:'black'}} >
-                <MenuItem  value={value} sx={{fontFamily:'Syne mono',
-                justifyContent:'center', ':hover':{color:'#51DFDC', fontWeight:'bold'}}}
-                >
-                {value}
-                </MenuItem>
+              {buttonValues.map((value) => (
+                <Link key={value} to={`/${value.toLowerCase()}`} style={{ textDecoration: 'none', color: 'black' }}>
+                  <MenuItem
+                    value={value}
+                    sx={{
+                      fontFamily: 'Syne mono',
+                      justifyContent: 'center',
+                      ':hover': { color: '#51DFDC', fontWeight: 'bold' },
+                      '@media (max-width:600px)': { // Responsive styling for MenuItem
+                        fontSize: '14px',
+                      },
+                    }}
+                  >
+                    {value}
+                  </MenuItem>
                 </Link>
               ))}
             </Menu>
-       
-           </Box>
+          </Box>
           </Toolbar>
         </AppBar>
     </div>
