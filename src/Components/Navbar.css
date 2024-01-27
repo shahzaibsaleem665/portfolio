@@ -3,3 +3,7 @@
     top: 0;
     padding: 0;
 }
+.navbar{
+    position: sticky;
+    z-index: 1;
+}

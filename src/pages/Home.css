@@ -8,7 +8,8 @@
 display: flex;
 flex-wrap: wrap;
 align-items: center;
-  justify-content: center;
+justify-content: left;
+padding-right: 90px;
 }
 
 .home__profile {
@@ -16,7 +17,7 @@ align-items: center;
   width: auto;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
   background-color: black;
-  margin-right: 80px;
+  margin-right: 110px;
    /* Adjust margin for better spacing */
 }
 @media screen and (max-width:900px) {

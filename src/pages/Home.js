@@ -32,7 +32,7 @@ function Home() {
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'relative',
-          height: '420px',
+          height: '450px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -51,14 +51,14 @@ function Home() {
             variant='h4'
             color='inherit'
             sx={{
-              fontSize: { xs: '35px', sm: '45px', md: '50px', lg: '70px', xl: '90px' },
-              fontFamily: 'Segoe UI',
+              fontSize: { xs: '35px', sm: '45px', md: '50px', lg: '60px', xl: '90px' },
+              fontFamily: 'Segoe UI', height:{xs:'auto', sm:'', md:'', lg:'auto'},
               lineHeight: { xs: '1', sm: '0.9', md: '0.9', lg: '1' },
               marginLeft: { xs: '30px', sm: '40px', md:'90px' },
             }}
           >
             Hi, I'm {' '}
-            <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay' }}>
+            <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay', }}>
               {textItems[currentTextIndex]}
             </strong>
           </Typography>
@@ -69,7 +69,7 @@ function Home() {
               fontSize: { xs: '16px', sm: '18px', md: '20px' },
               fontFamily: 'Syne Mono',
               fontWeight: 'bold',
-              marginTop: '10px',
+              marginTop: '0px',
               marginLeft: { xs: '30px', sm: '40px', md:'90px' }, // Add some space between lines
             }}
           >
@@ -97,8 +97,6 @@ function Home() {
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />
       </Box>
       <div className='home__content'>
-        <Cards />
-        <Cards />
         <Cards />
         <Cards />
         <Cards />

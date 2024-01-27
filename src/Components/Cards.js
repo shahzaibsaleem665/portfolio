@@ -2,18 +2,19 @@ import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import LinkIcon from '@mui/icons-material/Link';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import gmail from '../assets/pictures/gmail.png'
 
-const buttonValues = [<GitHubIcon/>, <LinkedInIcon />, <LinkIcon />]
+const buttonValues = [<GitHubIcon/>, <LinkedInIcon />, <OpenInNewIcon />]
 function Cards() {
   return (
     <div className='card'>
-        <Card sx={{ maxWidth: 250, margin:'35px', borderRadius:'10px', marginTop:'50px'  }}>
+        <Card sx={{ maxWidth: 250, margin:'30px',marginTop:'60px', marginLeft:'110px', borderRadius:'10px',   }}>
         <CardMedia
         component="img"
         alt="green iguana"
         height="140"
-        image="https://media.istockphoto.com/id/1457433817/photo/group-of-healthy-food-for-flexitarian-diet.jpg?b=1&s=612x612&w=0&k=20&c=V8oaDpP3mx6rUpRfrt2L9mZCD0_ySlnI7cd4nkgGAb8="
+        image={gmail}
       />
        <CardContent>
         <Typography  variant="h5" component="div" sx={{fontFamily:'Segoe UI', paddingLeft:'10px'}} >
