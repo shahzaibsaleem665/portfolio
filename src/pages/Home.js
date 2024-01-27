@@ -5,7 +5,7 @@ import shahzaib from '../assets/pictures/shahzaib.png';
 import Navbar from '../Components/Navbar';
 import Typography from '@mui/material/Typography';
 import { Box, Button } from '@mui/material';
-import Card from '../Components/Card';
+import Cards from '../Components/Cards';
 
 function Home() {
   const [textItems, setTextItems] = useState([
@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % textItems.length);
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [textItems]);
@@ -57,7 +57,7 @@ function Home() {
               marginLeft: { xs: '30px', sm: '40px', md:'90px' },
             }}
           >
-            Hi, I'm{' '}
+            Hi, I'm {' '}
             <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay' }}>
               {textItems[currentTextIndex]}
             </strong>
@@ -97,7 +97,14 @@ function Home() {
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />
       </Box>
       <div className='home__content'>
-        <Card />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+        
       </div>
     </div>
   );

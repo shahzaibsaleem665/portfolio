@@ -110,7 +110,7 @@ function Navbar() {
                   backgroundPosition: 'center',
                   marginLeft: '40px',
                   '@media (max-width:600px)': { // Responsive styling for Menu
-                    width: '60%',
+                    width: '70%',
                   },
                 },
               }}
