@@ -13,14 +13,17 @@ import './Navbar.css'
 import menuBg from '../assets/logos/menuBg.svg';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 
-const buttonValues = ['Work', 'About', 'Contact', 'Skills'];
+const buttonValues = ['Home/','Work', 'About', 'Contact', 'Skills'];
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = useState(null);
   const openMenu = Boolean(anchorEl);
 
+  //code to render the Buttons dynamically using array.
+  //using Link to give them paths as well
 
-  const [selectedButton, setSelectedButton] = useState('');
+
+  const [selectedButton, setSelectedButton] = useState('Home/'); // Home Button is selected default and its path is '/'
 
   const handleButtonClick = (value) => {
     setSelectedButton(value);
@@ -56,9 +59,9 @@ function Navbar() {
            </Typography>
            <Box sx={{flexGrow: 1}} />
            <Box sx={{ marginLeft: 'auto', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
-      {buttonValues.map((value) => (
+      {buttonValues.map((value, index) => (
         
-        <Link key={value} to={`/${value.toLowerCase()}`} >
+        <Link key={value} to={index === 0 ? '/' : `/${value.toLowerCase()}`} >  {/* condintionally rendering the Button components to that the path to Homepage stays '/*/}
           <Button
           value={value}
           className={`nav__button ${selectedButton === value ? 'selected' : ''}`}
@@ -69,6 +72,7 @@ function Navbar() {
             fontSize: '16px',
             backgroundColor: selectedButton === value ? '#58B4E2' : 'inherit',
             color: selectedButton === value ? 'black' : 'black',
+            fontWeight: selectedButton === value ? 'bold' : '',
             '&:hover': {
               backgroundColor: selectedButton === value ? '#58B4E2' : 'transparent',
               fontWeight: 'bold'
