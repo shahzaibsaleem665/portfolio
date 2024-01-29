@@ -37,12 +37,13 @@ function Navbar() {
         sx={{
           borderBottom: '1px solid lightgray',
           boxShadow: 'none',
-          position: 'sticky',
           height: '70px',
           justifyContent: 'center',
+          
         }}
+        
       >
-        <Toolbar>
+        <Toolbar >
           <IconButton
             size='medium'
             edge='start'
@@ -109,7 +110,7 @@ function Navbar() {
                 <ChevronLeftIcon sx={{ fontSize: '30px', ':hover': { cursor: 'pointer' } }} />
               </IconButton>
               
-              <Box sx={{display:'flex',flexDirection:'column', top:'0px', width:'150px', alignItems:'center', backgroundImage: `url(${menuBg})`,
+              <Box sx={{display:'flex',flexDirection:'column', top:'0px', width:'200px', alignItems:'center', backgroundImage: `url(${menuBg})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'relative',}}>
                     <Divider sx={{ width: '100%', color:"black", borderTop:'1px solid black', }} /> 

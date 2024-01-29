@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { Box, Button } from '@mui/material';
 import Cards from '../Components/Cards';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
+import gmail from '../assets/pictures/gmail.png'
 
 function Home() {
   const history = useHistory();
@@ -32,7 +33,8 @@ function Home() {
 
   return (
     <div className='home'>
-      <Navbar />
+      <Box sx={{position:'sticky', zIndex:'1'}}><Navbar   /></Box>
+      
       <Box
         sx={{
           backgroundImage: `url(${background})`,
@@ -104,7 +106,7 @@ function Home() {
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />
       </Box>
       <div className='home__content'>
-        <Cards />
+        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
         <Cards />
         <Cards />
         <Cards />
