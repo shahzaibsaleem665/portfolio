@@ -6,8 +6,15 @@ import Navbar from '../Components/Navbar';
 import Typography from '@mui/material/Typography';
 import { Box, Button } from '@mui/material';
 import Cards from '../Components/Cards';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 function Home() {
+  const history = useHistory();
+
+  const handleNav = (e) => {
+    e.preventDefault();
+    history.push('/about');
+  }
   const [textItems, setTextItems] = useState([
     'Shahzaib Saleem',
     'Frontend Developer',
@@ -89,7 +96,7 @@ function Home() {
               ,
               ':hover': {
                 cursor:'pointer', backgroundColor:'#58B4E2', color:'black'} // Add some space between button and text
-            }}
+            }} onClick={handleNav}
           >
             Learn More
           </Button>
