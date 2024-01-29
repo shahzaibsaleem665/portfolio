@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Avatar, Drawer, Divider } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
-import menuBg from '../assets/logos/menuBg.svg'
+import background from '../assets/logos/background.svg'
 import logo from '../assets/logos/logo.png'
 import profile from '../assets/pictures/profile.jpg'
 const buttonValues = ['Home', 'Work', 'About', 'Contact', 'Skills'];
@@ -39,7 +39,7 @@ function Navbar() {
           boxShadow: 'none',
           height: '70px',
           justifyContent: 'center',
-          
+          backgroundColor:'whitesmoke',  
         }}
         
       >
@@ -110,7 +110,7 @@ function Navbar() {
                 <ChevronLeftIcon sx={{ fontSize: '30px', ':hover': { cursor: 'pointer' } }} />
               </IconButton>
               
-              <Box sx={{display:'flex',flexDirection:'column', top:'0px', width:'200px', alignItems:'center', backgroundImage: `url(${menuBg})`,
+              <Box sx={{display:'flex',flexDirection:'column', top:'0px', width:'200px', alignItems:'center', backgroundImage: `url(${background})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'relative',}}>
                     <Divider sx={{ width: '100%', color:"black", borderTop:'1px solid black', }} /> 
@@ -132,7 +132,7 @@ function Navbar() {
                       '&:hover': {
                         backgroundColor:'transparent',
                         fontWeight: 'bold',
-                        color:'#58B4E2'
+                        color:'black'
                       },
                     }}
                   >

@@ -33,27 +33,30 @@ function Home() {
 
   return (
     <div className='home'>
-      <Box sx={{position:'sticky', zIndex:'1'}}><Navbar   /></Box>
-      
+      <Navbar   />
       <Box
         sx={{
           backgroundImage: `url(${background})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           backgroundPosition: 'relative',
-          height: '450px',
+          height: '400px',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
+          marginTop:"60px",
+          
+          
+         
         }}
       >
         <Box
           sx={{
             backgroundColor: 'transparent',
             width: '100%',
-            padding: '20px',
-            margin: '0 auto', // Center the content
-            textAlign: 'left', // Center the text
+            padding: '20px', // Center the content
+            textAlign: 'left',
+            
           }}
         >
           <Typography
@@ -64,10 +67,11 @@ function Home() {
               fontFamily: 'Segoe UI', height:{xs:'auto', sm:'', md:'', lg:'auto'},
               lineHeight: { xs: '1', sm: '0.9', md: '0.9', lg: '1' },
               marginLeft: { xs: '30px', sm: '40px', md:'90px' },
+             
             }}
           >
             Hi, I'm {' '}
-            <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay', }}>
+            <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay',}}>
               {textItems[currentTextIndex]}
             </strong>
           </Typography>
@@ -95,7 +99,7 @@ function Home() {
               marginLeft: { xs: '30px', sm: '40px', md:'90px' },
               backgroundColor: 'black',
               color: '#51DFDC'
-              ,
+              ,zIndex:'1',
               ':hover': {
                 cursor:'pointer', backgroundColor:'#58B4E2', color:'black'} // Add some space between button and text
             }} onClick={handleNav}

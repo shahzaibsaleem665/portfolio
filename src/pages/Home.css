@@ -3,6 +3,10 @@
 * {
   margin: 0;
   padding: 0;
+
+}
+.home {
+  background-color: whitesmoke;
 }
 .home__content {
 display: flex;
