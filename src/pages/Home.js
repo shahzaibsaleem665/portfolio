@@ -34,39 +34,41 @@ function Home() {
   return (
     <div className='home'>
       <Navbar   />
+      <div className="home__main">
       <Box
         sx={{
-          backgroundImage: `url(${background})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
           backgroundPosition: 'relative',
-          height: '400px',
+          height: '430px',
           display: 'flex',
+          flexDirection:{xs:'column'},
           alignItems: 'center',
           justifyContent: 'center',
           marginTop:"60px",
-          
-          
-         
+          width:'90%',
+          backgroundColor:'pink' ,    
         }}
       >
         <Box
           sx={{
             backgroundColor: 'transparent',
             width: '100%',
-            padding: '20px', // Center the content
-            textAlign: 'left',
+            justifyContent:'center',
+            alignItems:'center',
+            margin:'20px',
+            height:'350px',
+            backgroundColor:'violet'
             
           }}
         >
           <Typography
             variant='h4'
             color='inherit'
+
             sx={{
               fontSize: { xs: '35px', sm: '45px', md: '50px', lg: '60px', xl: '90px' },
               fontFamily: 'Segoe UI', height:{xs:'auto', sm:'', md:'', lg:'auto'},
               lineHeight: { xs: '1', sm: '0.9', md: '0.9', lg: '1' },
-              marginLeft: { xs: '30px', sm: '40px', md:'90px' },
+             textAlign:{xs:'center'}
              
             }}
           >
@@ -82,8 +84,7 @@ function Home() {
               fontSize: { xs: '16px', sm: '18px', md: '20px' },
               fontFamily: 'Syne Mono',
               fontWeight: 'bold',
-              marginTop: '0px',
-              marginLeft: { xs: '30px', sm: '40px', md:'90px' }, // Add some space between lines
+              textAlign:{xs:'center'}
             }}
           >
             Passionate Frontend React Developer dedicated to creating exceptional user experiences.
@@ -95,11 +96,10 @@ function Home() {
               fontSize: { xs: '16px', sm: '18px', md: '20px' },
               fontFamily: 'Syne Mono',
               fontWeight: 'bold',
-              marginTop: '10px',
-              marginLeft: { xs: '30px', sm: '40px', md:'90px' },
               backgroundColor: 'black',
               color: '#51DFDC'
-              ,zIndex:'1',
+              ,
+              alignItems:'center',zIndex:'1',
               ':hover': {
                 cursor:'pointer', backgroundColor:'#58B4E2', color:'black'} // Add some space between button and text
             }} onClick={handleNav}
@@ -109,13 +109,18 @@ function Home() {
         </Box>
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />
       </Box>
+      </div>
+
+
       <div className='home__content'>
+        <div className="home__cards">
         <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
-        
+        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
+        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
+        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
+        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
+        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
+        </div>
       </div>
     </div>
   );

@@ -13,7 +13,8 @@ const buttonValues = [
 function Cards({title, img, links}) {
   return (
     <div className='card'>
-        <Card sx={{ maxWidth: 250, margin:'30px',marginTop:'60px', marginLeft:'110px', borderRadius:'10px',  }}>
+        <Card sx={{ maxWidth: 250, 
+          margin:'50px',borderRadius:'10px',  }}>
         <CardMedia
         component="img"
         alt="green iguana"

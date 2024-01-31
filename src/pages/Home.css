@@ -7,13 +7,29 @@
 }
 .home {
   background-color: whitesmoke;
+  width: 100%;
+}
+.home__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  margin: auto;
+  height: 500px;
+
 }
 .home__content {
+  width: 100%;
+  background-color: green;
+}
+.home__cards {
 display: flex;
 flex-wrap: wrap;
 align-items: center;
-justify-content: left;
-padding-right: 90px;
+justify-content: space-between;
+width: 90%;
+background-color: red;
+margin: auto;
 }
 
 .home__profile {
@@ -21,8 +37,6 @@ padding-right: 90px;
   width: auto;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
   background-color: black;
-  margin-right: 110px;
-   /* Adjust margin for better spacing */
 }
 @media screen and (max-width:900px) {
   .home__profile {
@@ -33,7 +47,5 @@ padding-right: 90px;
 @media screen and (max-width:600px) {
   .home__profile {
     height: 200px;
-    width: auto;
-    margin-right: 60px;
   }
 }
