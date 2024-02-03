@@ -38,75 +38,57 @@ function Home() {
       <Box
         sx={{
           backgroundPosition: 'relative',
-          height: '430px',
+          height: '410px',
           display: 'flex',
-          flexDirection:{xs:'column'},
+          flexDirection:{xs:'column', sm:'column', md:'row'},
           alignItems: 'center',
-          justifyContent: 'center',
           marginTop:"60px",
           width:'90%',
           backgroundColor:'pink' ,    
+          
         }}
       >
-        <Box
-          sx={{
-            backgroundColor: 'transparent',
-            width: '100%',
-            justifyContent:'center',
-            alignItems:'center',
-            margin:'20px',
-            height:'350px',
-            backgroundColor:'violet'
-            
-          }}
-        >
-          <Typography
-            variant='h4'
-            color='inherit'
-
-            sx={{
-              fontSize: { xs: '35px', sm: '45px', md: '50px', lg: '60px', xl: '90px' },
-              fontFamily: 'Segoe UI', height:{xs:'auto', sm:'', md:'', lg:'auto'},
-              lineHeight: { xs: '1', sm: '0.9', md: '0.9', lg: '1' },
-             textAlign:{xs:'center'}
-             
-            }}
-          >
-            Hi, I'm {' '}
-            <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay',}}>
-              {textItems[currentTextIndex]}
-            </strong>
-          </Typography>
-          <Typography
-            variant='body1'
-            color='inherit'
-            sx={{
-              fontSize: { xs: '16px', sm: '18px', md: '20px' },
-              fontFamily: 'Syne Mono',
-              fontWeight: 'bold',
-              textAlign:{xs:'center'}
-            }}
-          >
-            Passionate Frontend React Developer dedicated to creating exceptional user experiences.
-          </Typography>
-          <Button
-            variant='outlined'
-            sx={{
-              padding: '10px',
-              fontSize: { xs: '16px', sm: '18px', md: '20px' },
-              fontFamily: 'Syne Mono',
-              fontWeight: 'bold',
-              backgroundColor: 'black',
-              color: '#51DFDC'
-              ,
-              alignItems:'center',zIndex:'1',
-              ':hover': {
-                cursor:'pointer', backgroundColor:'#58B4E2', color:'black'} // Add some space between button and text
-            }} onClick={handleNav}
-          >
-            Learn More
-          </Button>
-        </Box>
+        <div className='home__mainText'
+>
+  <Typography
+    variant='h4'
+    color='inherit'
+    sx={{
+      fontSize: { xs: '32px', sm: '40px', md: '50px', lg: '60px', xl: '90px' },
+      fontFamily: 'Segoe UI',
+      height: { xs: 'auto', sm: '60px', md: '80px', lg: '100px' },
+      lineHeight: { xs: '1.2', sm: '1.2', md: '1.2', lg: '1.2' },
+      textAlign: 'left',
+      width:'90%', // Centered for xs and sm
+    }}
+  >
+    Hi, I'm{' '}
+    <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay' }}>
+      {textItems[currentTextIndex]}
+    </strong>
+  </Typography>
+  <Typography
+    variant='body1'
+    color='inherit'
+    sx={{
+      fontSize: { xs: '16px', sm: '18px', md: '20px' },
+      fontFamily: 'Syne Mono',
+      fontWeight: 'bold',
+      textAlign: 'left',
+      width:'90%',// Centered for xs and sm
+      
+    }}
+  >
+    Passionate Frontend React Developer dedicated to creating exceptional user experiences.
+  </Typography>
+  <Button
+    className='home__mainButton'
+    onClick={handleNav}
+  >
+    Learn more
+  </Button>
+  
+</div>
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />
       </Box>
       </div>

@@ -18,6 +18,30 @@
   height: 500px;
 
 }
+.home__mainText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+}
+.home__mainButton {
+  background-color: black !important;
+  color: #58b4e2 !important;
+  z-index: 1;
+  border: 1px solid #58b4e2 !important;
+  text-transform: none !important;
+  font-size: 20px !important;
+  font-family: 'syne Mono' !important;
+  font-weight: bold !important;
+  margin-top: 10px !important;
+  
+
+}
+.home__mainButton:hover {
+  background: #58b4e2 !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
 .home__content {
   width: 100%;
   background-color: green;
@@ -40,12 +64,38 @@ margin: auto;
 }
 @media screen and (max-width:900px) {
   .home__profile {
-    height: 250px;
+    height: 200px;
   width: auto;
+  }
+  .home__mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height:220px;
+    margin: 10px;
+    background-color: purple;
+  }
+  .home__mainButton {
+    font-size: 18px !important;
   }
 }
 @media screen and (max-width:600px) {
   .home__profile {
+    height: 180px;
+  }
+  .home__mainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 200px;
+    margin: 10px;
+    background-color: green;
+    
+    
+  }
+  .home__mainButton {
+    font-size: 16px !important;
+    
   }
 }
