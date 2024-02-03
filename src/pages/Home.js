@@ -43,8 +43,7 @@ function Home() {
           flexDirection:{xs:'column', sm:'column', md:'row'},
           alignItems: 'center',
           marginTop:"60px",
-          width:'90%',
-          backgroundColor:'pink' ,    
+          width:'90%',    
           
         }}
       >
@@ -59,7 +58,9 @@ function Home() {
       height: { xs: 'auto', sm: '60px', md: '80px', lg: '100px' },
       lineHeight: { xs: '1.2', sm: '1.2', md: '1.2', lg: '1.2' },
       textAlign: 'left',
-      width:'90%', // Centered for xs and sm
+      width:'90%',
+      marginLeft:'40px' // Centered for xs and sm
+      
     }}
   >
     Hi, I'm{' '}
@@ -75,18 +76,22 @@ function Home() {
       fontFamily: 'Syne Mono',
       fontWeight: 'bold',
       textAlign: 'left',
-      width:'90%',// Centered for xs and sm
+      width:'90%',
+      marginTop:'10px',
+      marginLeft:'40px'// Centered for xs and sm
       
     }}
   >
     Passionate Frontend React Developer dedicated to creating exceptional user experiences.
   </Typography>
+  <div className='button__home'>
   <Button
     className='home__mainButton'
     onClick={handleNav}
   >
     Learn more
   </Button>
+  </div>
   
 </div>
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />

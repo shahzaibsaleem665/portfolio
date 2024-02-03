@@ -44,6 +44,7 @@ function Navbar() {
         
       >
         <Toolbar >
+          
           <IconButton
             size='medium'
             edge='start'
@@ -52,23 +53,25 @@ function Navbar() {
             onClick={handleDrawerOpen}
             sx={{
               display: { xs: 'flex', sm: 'none', md: 'none' },
-              marginLeft: { xs: '30px' },
+              marginLeft: { xs: '30px', },
             }}
           >
             <MenuIcon sx={{ fontSize: '30px', ':hover': { cursor: 'pointer' } }} />
           </IconButton>
-          <Box sx={{paddingLeft: { xs:'0px', sm:'50px', md:'70px' }, display:{ xs: 'flex', sm: 'flex', md:'flex'}, margin: '0px'}}>
+          
+          <Box sx={{marginLeft: { xs:'0px', sm:'50px', md:'90PX' }, display:{ xs: 'flex', sm: 'flex', md:'flex'}, margin: '0px'}}>
               <Link to='/'>
               <img src={logo} alt='my logo' height='60px' style={{cursor: 'pointer'}}
            />
            </Link>
            </Box>
            
-           <Typography  sx={{fontFamily:'Syne Mono, monospace', fontSize:'25px', fontWeight:'bold', display:{xs:'none', sm:'none', md:'flex'}}}>
+           <Typography  sx={{fontFamily:'Syne Mono, monospace', fontSize:'25px', fontWeight:'bold', display:{xs:'none', sm:'none', md:'flex',  marginRight:'20px', whiteSpace: 'nowrap',}}}>
             Shahzaib Saleem
            </Typography>
+          
            <Box sx={{flexGrow: 1}} />
-           <Box sx={{ marginLeft: 'auto', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex' } }}>
+           <Box sx={{ marginLeft: 'auto',  overflow: 'hidden', flex:'0.6', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex',  } }}>
       {buttonValues.map((value, index) => (
         
         <Link key={value} to={index === 0 ? '/' : `/${value.toLowerCase()}`} >  {/* condintionally rendering the Button components to that the path to Homepage stays '/*/}
@@ -79,6 +82,7 @@ function Navbar() {
           sx={{
             marginRight: '10px',
             fontFamily: 'Syne Mono',
+            
             fontSize: '16px',
             textTransform: 'capitalize',
             backgroundColor: selectedButton === value ? '#58B4E2' : 'inherit',
