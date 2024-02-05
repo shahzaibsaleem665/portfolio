@@ -71,7 +71,7 @@ function Navbar() {
            </Typography>
           
            <Box sx={{flexGrow: 1}} />
-           <Box sx={{ marginLeft: 'auto',  overflow: 'hidden', flex:'0.6', paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex',  } }}>
+           <Box sx={{ marginLeft: 'auto',  overflow: 'hidden',  paddingRight: '20px', display: { xs: 'none', sm: 'flex', md: 'flex',  } }}>
       {buttonValues.map((value, index) => (
         
         <Link key={value} to={index === 0 ? '/' : `/${value.toLowerCase()}`} >  {/* condintionally rendering the Button components to that the path to Homepage stays '/*/}

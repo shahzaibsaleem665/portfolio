@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import background from '../assets/logos/background.svg';
 import shahzaib from '../assets/pictures/shahzaib.png';
 import Navbar from '../Components/Navbar';
-import Typography from '@mui/material/Typography';
-import { Box, Button } from '@mui/material';
+import {  Button } from '@mui/material';
 import Cards from '../Components/Cards';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 import gmail from '../assets/pictures/gmail.png'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 function Home() {
   const history = useHistory();
@@ -17,8 +16,8 @@ function Home() {
     history.push('/about');
   }
   const [textItems, setTextItems] = useState([
-    'Shahzaib Saleem',
     'Frontend Developer',
+    'Full-Stack Developer',
     'React Developer',
   ]);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -35,79 +34,46 @@ function Home() {
     <div className='home'>
       <Navbar   />
       <div className="home__main">
-      <Box
-        sx={{
-          backgroundPosition: 'relative',
-          height: '410px',
-          display: 'flex',
-          flexDirection:{xs:'column', sm:'column', md:'row'},
-          alignItems: 'center',
-          marginTop:"60px",
-          width:'90%',    
-          
-        }}
-      >
-        <div className='home__mainText'
->
-  <Typography
-    variant='h4'
-    color='inherit'
-    sx={{
-      fontSize: { xs: '32px', sm: '40px', md: '50px', lg: '60px', xl: '90px' },
-      fontFamily: 'Segoe UI',
-      height: { xs: 'auto', sm: '60px', md: '80px', lg: '100px' },
-      lineHeight: { xs: '1.2', sm: '1.2', md: '1.2', lg: '1.2' },
-      textAlign: 'left',
-      width:'90%',
-      marginLeft:'40px' // Centered for xs and sm
-      
-    }}
-  >
-    Hi, I'm{' '}
-    <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay' }}>
-      {textItems[currentTextIndex]}
-    </strong>
-  </Typography>
-  <Typography
-    variant='body1'
-    color='inherit'
-    sx={{
-      fontSize: { xs: '16px', sm: '18px', md: '20px' },
-      fontFamily: 'Syne Mono',
-      fontWeight: 'bold',
-      textAlign: 'left',
-      width:'90%',
-      marginTop:'10px',
-      marginLeft:'40px'// Centered for xs and sm
-      
-    }}
-  >
-    Passionate Frontend React Developer dedicated to creating exceptional user experiences.
-  </Typography>
-  <div className='button__home'>
+        <div className='home__mainText'>
+<h3>
+    Hi, I'm <b>Shahzaib Saleem</b>
+  </h3>
+  <h1 >
+  <strong style={{ fontFamily: 'League Spartan', mixBlendMode: 'overlay' }}>
+    {textItems[currentTextIndex]}
+  </strong>
+  </h1>
+<p>
+    I am a React Developer dedicated to create exceptional user experiences.
+</p>
   <Button
     className='home__mainButton'
     onClick={handleNav}
+    endIcon={<ArrowRightAltIcon/>}
   >
-    Learn more
+    About me
   </Button>
-  </div>
-  
 </div>
         <img src={shahzaib} className='home__profile' alt='Shahzaib' />
-      </Box>
       </div>
 
-
-      <div className='home__content'>
-        <div className="home__cards">
-        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        <Cards img={gmail} title='Gmail Clone' links={{github: 'https://github.com'}}/>
-        </div>
+      <div className='home__section'>
+       <Cards  src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+                title="Online Experiences"
+                text="Unique activities we can do together, led by a world of hosts."
+        />
+          <Cards  src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+                title="Online Experiences"
+                text="Unique activities we can do together, led by a world of hosts."
+        />
+          <Cards  src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+                title="Online Experiences"
+                text="Unique activities we can do together, led by a world of hosts."
+        />
+          <Cards  src="https://a0.muscache.com/im/pictures/eb9c7c6a-ee33-414a-b1ba-14e8860d59b3.jpg?im_w=720"
+                title="Online Experiences"
+                text="Unique activities we can do together, led by a world of hosts."
+        />
       </div>
     </div>
   );
