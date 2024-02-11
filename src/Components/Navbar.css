@@ -5,4 +5,109 @@
 }
 .navbar {
     position: sticky;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: whitesmoke;
+    position: sticky;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, black, white) 1;
+    
 }
+.navbar__left {
+    display: flex;
+    flex-direction: row;
+    max-width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__middle {
+    display: flex;
+    align-items: center;
+    max-width: fit-content;
+    background-image: url('../assets/logos/middle.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    padding: 5px;
+    opacity: 0.9;
+    
+}
+.navbar__right {
+    display: flex;
+}
+@media screen and (max-width: 600px) 
+ {
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+        .navbar__left {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .navbar__left > .navbar__leftLogo { 
+            display: none;
+        }
+        .navbar__middle {
+            display: none;
+        }
+        .navbar__right {
+            margin-right : 10%
+        }
+        
+    }
+@media screen and (min-width: 600px)  {
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+           
+        }
+        .navbar__left {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5%;  
+        }
+        .navbar__middle {
+            display: flex;
+        }
+        .navbar__right {
+            margin-right : 10%
+        }
+        
+}
+@media screen and (min-width: 768px) 
+{
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+        }
+        .navbar__left {
+            display: flex;
+            flex-direction: row;
+            width: auto;
+            align-items: center;
+            justify-content: center;
+        }
+        .navbar__middle {
+            display: flex;
+            
+        }
+    
+    }

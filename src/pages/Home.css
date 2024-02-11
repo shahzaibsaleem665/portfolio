@@ -1,5 +1,5 @@
 /* Home.css */
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
 * {
   margin: 0;
@@ -7,197 +7,130 @@
 
 }
 .home {
-  background-color: whitesmoke;
   width: 100%;
-}
-.home__main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: auto;
+  background-color: black;
+}
+.home__content{
+  display: flex;
+  width: 80%;
+  height: 400px;
   background-image: url('../assets/logos/background.svg');
   background-position: center;
   background-size: cover;
-  margin: auto;
-  margin-top: 70px;
-  height: 400px;
+  justify-content: space-between;
 }
-.home__mainText {
+.home__contentLeft{
   display: flex;
   flex-direction: column;
-  width: 62%;
-  align-items: flex-start;
-  padding:10px;
-  text-align: left;
-  margin-right: 10px;
-  
+align-items: left;
+margin-left: 5%;
+height: 350px;
 }
-.home__mainText > h3,h1,p {
-margin-left: 0px;
-width: 100%;
-padding-top: 5px;
+.home__contentLeft > h1 {
+  font-family: 'Roboto';
+  font-size: 70px;
+  margin:10px;
 }
-.home__mainText > h3 {
-  font-size: 55px;
-  font-weight: 100;
-  font-family:'calibri';
-  text-transform: uppercase;
+.home__contentLeft > h2 {
+  font-family: 'League Spartan', sans-serif;
+  mix-blend-mode: overlay;
+  font-size: 80px;
+  margin:10px;
 }
-.home__mainText > h1 {
-  font-size: 85px;  
-}
-.home__mainText > p {
-  font-size: 20px;
-  font-weight: bold;
+.home__contentLeft > p {
   font-family: 'Syne Mono';
+  font-weight: bold;
+  font-size: 25px;
+  margin:10px;
 }
-.home__mainButton {
-  background-color: black !important;
-  color: #58b4e2 !important;
-  z-index: 1;
-  border: 1px solid #58b4e2 !important;
-  text-transform: none !important;
-  font-size: 20px !important;
-  font-family: 'syne Mono' !important;
-  font-weight: bold !important;
-  margin-top: 10px !important;
+.home__contentLeft > Button {
+  color: #58b4e2;
+  font-family: 'Syne Mono';
+  font-weight: bold;
+  border: 1px solid #58b4e2;
+  background-color: black;
+  font-size: 20px;
+  width: fit-content;
+  text-transform: none;
+  margin:10px;
 }
-.home__mainButton > .MuiButton-endIcon > .MuiSvgIcon-root {
-  font-size: 30px !important; /* Set your desired size */
+.home__contentLeft > Button > .MuiButton-endIcon > .MuiSvgIcon-root {
+  font-size: 30px;
 }
-.home__mainButton:hover {
-  background: #58b4e2 !important;
-  color: black !important;
-  border: 1px solid black !important;
+.home__contentLeft > Button:hover {
+  color: black;
+  background-color: #58b4e2;
+  border: 1px solid black;
 }
-.home__section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin-left: 100px;
-  background-color: green;
-}
+.home__contentRight {
+  margin-left: 5%;
+  margin:40px;
 
-.home__profile {
-  height: 300px;
-  width: auto;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% !important;
+}
+.home__contentRight > img {
+  height: 250px;
+  padding: 2px;
+  border-radius: 30% 70% 70% 30%/ 30% 30% 70% 70%;
   background-color: black;
 }
+/* Below code for responsiveness*/
 
-@media screen and (max-width:1024px) {
-  .home__profile {
-    height: 180px;
-  width: auto;
-  margin-top: 20px;
-  }
-  .home__main {
-    height: 300px;
-  }
-  
-  .home__mainText {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: left;
-    height: 250px;
-    width: 60%;
-    margin-top: 10px;
-    margin-left: 40px;
-  }
-  
-.home__mainText > h3 {
-  font-size: 45px;
-  font-weight: 100;
-  font-family:'calibri';
-  text-transform: uppercase;
-}
-.home__mainText > h1 {
-  font-size: 60px;  
-  width: 100%;
-}
-.home__mainText > p {
-  font-size: 22px;
-  font-weight: 500;
-  font-family: 'Syne Mono';
-}
-  .home__mainButton {
-    font-size: 16px !important;
-  }
-}
-@media screen and (max-width:820px) {
-  .home__profile {
-    height: 180px;
-  width: auto;
-  margin-top: 20px;
-  }
-  .home__main {
-    height: 300px;
-  }
-  
-  .home__mainText {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: left;
-    height: 250px;
-    width: 65%;
-    margin-top: 10px;
-    margin-left: 40px;
-  }
-  
-.home__mainText > h3 {
-  font-size: 40px;
-  font-weight: 100;
-  font-family:'calibri';
-  text-transform: uppercase;
-}
-.home__mainText > h1 {
-  font-size: 55px;  
-  width: 100%;
-}
-.home__mainText > p {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: 'Syne Mono';
-}
-  .home__mainButton {
-    font-size: 18px !important;
-  }
-}
+
+
 @media screen and (max-width:600px) {
-  .home__profile {
+.home__contentLeft > h1 {
+  font-size: 35px;
+ 
+}
+.home__contentLeft > h2 {
+  font-size: 47px;
+  height: 1200px;
+  background-color: pink;
+}
+.home__contentLeft > p {
+  font-size: 18px;
+}
+.home__contentLeft > Button {
+font-size: 18px;
+}
+.home__contentLeft > Button > .MuiButton-endIcon > .MuiSvgIcon-root {
+  font-size: 20px;
+}
+.home__contentRight {
+  display: none;
+}
+}
+/* for tablets and bigger phones */
+@media screen and (min-width:600px) {
+  .home__contentLeft > h1 {
+    font-size: 45px;
+   
+  }
+  .home__contentLeft > h2 {
+    font-size: 47px;
+    height: 1200px;
+    background-color: pink;
+  }
+  .home__contentLeft > p {
+    font-size: 18px;
+  }
+  .home__contentLeft > Button {
+  font-size: 18px;
+  }
+  .home__contentLeft > Button > .MuiButton-endIcon > .MuiSvgIcon-root {
+    font-size: 20px;
+  }
+  .home__contentRight {
     display: none;
   }
-  .home__main {
-    height: 250px;
-  }
-  
-  .home__mainText {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: left;
-    width: 80%;
-    height: 200px;
-  }
-  
-.home__mainText > h3 {
-  font-size: 26px;
-  font-weight: 100;
-  font-family:'calibri';
-  text-transform: uppercase;
 }
-.home__mainText > h1 {
-  font-size: 36px;  
-  width: 100%;
-}
-.home__mainText > p {
-  font-size: 16px;
-  font-weight: bold;
-  font-family: 'Syne Mono';
-}
-  .home__mainButton {
-    font-size: 16px !important;
-  }
+@media screen and (min-width:768px) {
+  .home__contentLeft> h1 {
+    color: blue;
+    }
 }

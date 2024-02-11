@@ -1,5 +1,5 @@
 .card {
-    margin: 10px;
+    margin: 25px;
     border-radius: 10px;
     overflow: hidden;
     max-width: 250px;
@@ -9,8 +9,8 @@
   
   .card > img {
     object-fit: fill;
-    min-width: 300px;
-    min-height: 200px;
+    max-width: 300px;
+    max-height: 200px;
     width: 100%;
   }
   
@@ -24,6 +24,9 @@
     .card__info > h2 {
       font-size: 18px;
       font-weight: 600;
+      white-space:nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     
     .card__info > h4 {
@@ -31,4 +34,9 @@
       font-weight: 300;
       margin-top: 8px;
       margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
     }
