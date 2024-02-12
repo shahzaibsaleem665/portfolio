@@ -15,7 +15,7 @@ function App() {
     <div className="app">
       <Switch>
         <Route path='/'>
-        <Home />
+        <Home id='Home' />
         </Route>
       </Switch>
      

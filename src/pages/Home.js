@@ -3,13 +3,12 @@ import './Home.css'
 import Navbar from '../Components/Navbar';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
 import { Button } from '@mui/material';
-import shahzaib from '../assets/pictures/shahzaib.png'
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 function Home() {
  
   const history = useHistory();
   const [text, setText] = useState([
-  'Frontend Developer', 'React Developer', 'Full-Stack Developer', 'Web-App Developer', 'React-Native Developer'
+  'Frontend Developer', 'React Developer', 'Full-Stack Developer', 'Web-App Developer'
   ]);
 
   const [index, setIndex] = useState(0);
@@ -26,19 +25,12 @@ function Home() {
     <div className='home'>
       <Navbar />
   <div className="home__content">
-  <div className="home__contentLeft">
     <h1>I'm Shahzaib Saleem</h1>
     <h2>{text[index]}</h2>
     <p>I am a React Developer dedicated to create  exceptional user experiences.</p>
     <Button onClick={(e) => history.push('/about')} endIcon={<ArrowRightAltIcon />}>About me</Button>
-  </div>
-  <div className="home__contentRight">
-    <img src={shahzaib}/>
-  </div>
 </div>
-     
-      
-    </div>
+</div>
   )
 }
 

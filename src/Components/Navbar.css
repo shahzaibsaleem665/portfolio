@@ -5,41 +5,36 @@
 }
 .navbar {
     position: sticky;
-    width: 80%;
-    margin: auto;
+    width: 100%;
+    top: 0;
+    padding-top: 10px ;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: whitesmoke;
+    justify-content: space-between;
     position: sticky;
-    border-bottom: 2px solid;
-    border-image: linear-gradient(to right, black, white) 1;
     
 }
 .navbar__left {
     display: flex;
     flex-direction: row;
-    max-width: 200px;
     align-items: center;
-    justify-content: center;
+    padding-left: 20px;
+}
+.navbar__left > img {
+    height: 60px;
+    cursor: pointer;
 }
 
-.navbar__middle {
+.navbar__right {
     display: flex;
     align-items: center;
     max-width: fit-content;
-    background-image: url('../assets/logos/middle.png');
-    background-position: center;
-    background-size: cover;
     border-radius: 50px;
-    padding: 5px;
+    padding-right: 50px;
     opacity: 0.9;
-    
 }
-.navbar__right {
-    display: flex;
-}
+
 @media screen and (max-width: 600px) 
  {
         .navbar {
@@ -56,15 +51,15 @@
             justify-content: center;
             
         }
-        .navbar__left > .navbar__leftLogo { 
+        
+        .navbar__leftLogo > img {
+            height: 50px;
+        }
+
+        .navbar__right{
             display: none;
         }
-        .navbar__middle {
-            display: none;
-        }
-        .navbar__right {
-            margin-right : 10%
-        }
+       
         
     }
 @media screen and (min-width: 600px)  {
@@ -82,12 +77,10 @@
             justify-content: center;
             margin-left: 5%;  
         }
-        .navbar__middle {
+        .navbar__right {
             display: flex;
         }
-        .navbar__right {
-            margin-right : 10%
-        }
+        
         
 }
 @media screen and (min-width: 768px) 
@@ -105,9 +98,8 @@
             align-items: center;
             justify-content: center;
         }
-        .navbar__middle {
+        .navbar__right {
             display: flex;
-            
         }
     
     }
