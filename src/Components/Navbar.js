@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom';
 import logo from '../assets/logos/logo.png'
 import Sidebar from './sidebar/Sidebar';
-const buttonValues = ['Home', 'Work', 'About', 'Contact', 'Skills'];
+const buttonValues = ['Home','About' ,'Work','Skills', 'Contact'];
 
 
 function Navbar() {
@@ -24,8 +24,8 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-      <Sidebar />
           <div className="navbar__left">
+          <Sidebar />
               <img src={logo} alt='my logo' onClick={homeNav}
            />
          </div>
@@ -43,11 +43,11 @@ function Navbar() {
             fontSize: '16px',
             textTransform: 'capitalize',
             borderRadius:'50px',
-            backgroundColor: selectedButton === value ? '#5C89E8' : 'inherit',
+            backgroundColor: selectedButton === value ? '#9EC8B9' : 'inherit',
             color: selectedButton === value ? 'black' : 'white',
             fontWeight: selectedButton === value ? 'bold' : '',
             '&:hover': {
-              backgroundColor: selectedButton === value ? '#58B4E2' : 'transparent',
+              backgroundColor: selectedButton === value ? '#9EC8B9' : 'transparent',
               fontWeight: 'bold'
             },
           }}
