@@ -19,10 +19,66 @@
 .home__content{
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 70px);
+  width: 70%;
+  height: 80vh;
+  margin: auto;
+  overflow: hidden;
   justify-content: center;
+  top: 0;
+  margin-left: 130px;
+}
+.home__content > h2{
+  color: #9EC8B9;
+  font-size: 40px;
+  padding-left: 20px;
+  margin-top: 10px;
+  letter-spacing: 5px;
+  font-family: 'League Spartan';
+}
+.home__content > h1 {
+  font-size: 90px;
+  font-family: 'Roboto';
+  padding-left: 17px;
+  margin-top: 10px;
+}
+.home__content > p {
+  font-family: 'League Spartan';
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.home__buttons > Button {
   align-items: center;
+  background-color: transparent;
+  width: fit-content;
   color: white;
+  border: 1px solid white;
+  justify-content: flex-start;
+  margin-left: 18px;
+  margin-top: 20px;
+  text-decoration: none;
+  text-transform: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.home__buttons > .contact {
+  background-color: white;
+  color: #092635;
+  font-weight: bold;
+}
+.home__buttons > .contact:hover {
+  background-color: transparent;
+  color: white;
+}
+.home__buttons > Button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #1B4242;
+}
+.home__buttons > Button > .MuiButton-endIcon > .MuiSvgIcon-root {
+  font-size: 30px;
+  
 }
 @media screen and (max-width:600px) {
 

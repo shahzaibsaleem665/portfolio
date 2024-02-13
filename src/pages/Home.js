@@ -25,10 +25,13 @@ function Home() {
     <div className='home'>
       <Navbar />
   <div className="home__content">
-    <h1>I'm Shahzaib Saleem</h1>
-    <h2>{text[index]}</h2>
+    <h2>SHAHZAIB SALEEM</h2>
+    <h1>{text[index]}</h1>
     <p>I am a React Developer dedicated to create  exceptional user experiences.</p>
+    <div className='home__buttons'>
     <Button onClick={(e) => history.push('/about')} endIcon={<ArrowRightAltIcon />}>About me</Button>
+    <Button className='contact' onClick={(e) => history.push('/contact')} endIcon={<ArrowRightAltIcon />}>Contact me</Button>
+    </div>
 </div>
 </div>
   )
