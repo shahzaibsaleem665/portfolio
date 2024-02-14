@@ -1,18 +1,30 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Navbar.css';
-import Button from '@mui/material/Button';
-import { Link, useHistory } from 'react-router-dom/cjs/react-router-dom';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom';
+import logo_m from '../assets/logos/logo_m.png'
 import logo from '../assets/logos/logo.png'
 import Sidebar from './sidebar/Sidebar';
-
-
-
-const buttonValues = ['Home','About' ,'Work','Skills', 'Contact'];
+import FacebookIcon from '@mui/icons-material/Facebook';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 
 
 function Navbar() {
-  const [selectedButton, setSelectedButton] = useState('Home');
   const history = useHistory();
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
   const homeNav = (e) => {
@@ -20,45 +32,16 @@ function Navbar() {
     history.push('/');
   }
 
-  const handleButtonClick = (value) => {
-    setSelectedButton(value);
-    
-  };
-
   return (
     <div className='navbar'>
           <div className="navbar__left">
           <Sidebar />
-              <img src={logo} alt='my logo' onClick={homeNav}
-           />
+          <img src={windowWidth < 768 ? logo_m : logo} alt='my logo' onClick={homeNav} />
          </div>
           <div className='navbar__right'>
-      {buttonValues.map((value, index) => (
-        
-        <Link key={value} to={index === 0 ? '/' : `/${value.toLowerCase()}`} >  {/* condintionally rendering the Button components to that the path to Homepage stays '/*/}
-          <Button
-          value={value}
-          className={`nav__button ${selectedButton === value ? 'selected' : ''}`}
-          onClick={() => handleButtonClick(value)}
-          sx={{
-            marginRight: '10px',
-            fontFamily: 'Syne Mono',
-            fontSize: '16px',
-            textTransform: 'capitalize',
-            borderRadius:'50px',
-            backgroundColor: selectedButton === value ? '#9EC8B9' : 'inherit',
-            color: selectedButton === value ? 'black' : 'white',
-            fontWeight: selectedButton === value ? 'bold' : '',
-            '&:hover': {
-              backgroundColor: selectedButton === value ? '#9EC8B9' : 'transparent',
-              fontWeight: 'bold'
-            },
-          }}
-        >
-          {value}
-        </Button>
-        </Link>
-      ))}
+          <GitHubIcon />
+          <LinkedInIcon />
+          <FacebookIcon />
     </div>
   </div>
   );
