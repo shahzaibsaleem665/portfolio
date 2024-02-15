@@ -5,6 +5,9 @@
     justify-content: center;
     background-color: #9EC8B9;
     color: black;
+    z-index: 2;
+    
+
 
 }
 .sidebar__bg {
@@ -14,6 +17,8 @@
     width: 300px;
     bottom: 0;
     background-color: #9EC8B9;
+    
+
 
    
 }

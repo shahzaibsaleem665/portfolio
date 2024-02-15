@@ -34,16 +34,16 @@ function Navbar() {
 
   return (
     <div className='navbar'>
-          <div className="navbar__left">
-          <Sidebar />
-          <img src={windowWidth < 768 ? logo_m : logo} alt='my logo' onClick={homeNav} />
-         </div>
-          <div className='navbar__right'>
-          <GitHubIcon />
-          <LinkedInIcon />
-          <FacebookIcon />
+       <Sidebar />
+        <div className="navbar__content">
+           <img src={windowWidth < 768 ? logo_m : logo} alt='my logo' onClick={homeNav} />
+            <div className='navbar__social'>
+              <GitHubIcon />
+              <LinkedInIcon />
+              <FacebookIcon />
+            </div>
+        </div>
     </div>
-  </div>
   );
 }
 

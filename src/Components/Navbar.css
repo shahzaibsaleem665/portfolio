@@ -1,64 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
-* {
-    top: 0;
-    padding: 0;
-}
+
 .navbar {
-    position: sticky;
-    width: 90%;
-    height: 70px;
-    top: 0;
-    padding-top: 10px ;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
+    height: 100px;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   display: flex;
+
     
 }
-.navbar__left {
+.navbar  > .navbar__content {
+    margin: auto;
+    width: 70%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
-.navbar__left > img {
-    height: 60px;
-    cursor: pointer;
-    margin-top: 20px;
+.navbar__content > img {
+  height: 60px;
 }
 
-.navbar__right {
+.navbar__social {
     display: flex;
-    align-items: center;
     gap: 20px;
-    padding-right: 80px;
+    
 }
-.navbar__right > .MuiSvgIcon-root {
+.navbar__social > .MuiSvgIcon-root {
     font-size: 30px;
 }
 @media screen and (max-width: 600px) 
  {
         .navbar {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            align-items: center;
-            justify-content: space-between;
+          
         }
         
-        .navbar__left > img {
-            height: 40px;
-            margin-top: 10px;
-            margin-left: 90px;
+        .navbar__content > img {
+         
         }
-        .navbar__right > .MuiSvgIcon-root {
+        .navbar__social > .MuiSvgIcon-root {
             font-size: 16px;
         }
 
-        .navbar__right{
-            display: flex;
-            gap: 10px;
-            padding-right: 30px;
+        .navbar__social{
+         
 
         }
        
@@ -66,20 +50,13 @@
     }
 @media screen and (min-width: 600px)  {
         .navbar {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+          
            
         }
-        .navbar__left {
-            display: flex;
-            flex-direction: row;
-            width: auto;
-            align-items: center;
-            justify-content: center;
-            margin-left: 5%;  
+        .navbar__content {
+          
         }
-        .navbar__right {
+        .navbar__social {
             display: flex;
         }
         
@@ -88,19 +65,13 @@
 @media screen and (min-width: 768px) 
 {
         .navbar {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+  
             
         }
-        .navbar__left {
-            display: flex;
-            flex-direction: row;
-            width: auto;
-            align-items: center;
-            justify-content: center;
+        .navbar__content {
+          
         }
-        .navbar__right {
+        .navbar__social {
             display: flex;
             
         }
