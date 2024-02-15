@@ -30,11 +30,11 @@ const sliderVariant = {
     x:0,
   },
   animate: {
-    x:'-105%',
+    x:'-180%',
     transition:{
       repeat: Infinity,
-      duration:10,
-      staggerChildren:0.1,
+      duration:20,
+      staggerChildren:0.01,
     }
   }
 }
@@ -50,12 +50,12 @@ const sliderVariant = {
     <motion.h1 variants={textVariants}>React/Front-End Developer</motion.h1>
     <motion.p variants={textVariants}>I am a React Developer dedicated to create  exceptional user experiences.</motion.p>
     <motion.div variants={textVariants} className='home__buttons'>
-    <motion.button variants={textVariants} onClick={(e) => history.push('/about')} endIcon={<ArrowRightAltIcon />}>About me <ArrowRightAltIcon /></motion.button>
+    <motion.button variants={textVariants} onClick={(e) => history.push('/about')} >About me <ArrowRightAltIcon /></motion.button>
     <motion.button variants={textVariants} className='contact' onClick={(e) => history.push('/contact')} >Contact me <ArrowRightAltIcon /></motion.button>
     </motion.div>
 </motion.div>
 <motion.div className="home__backgroundText" variants={sliderVariant} initial='initial' animate='animate'>
-      Some Text
+      <motion.h1>Bringing Creative Designs To Life</motion.h1>
     </motion.div>
 </div>
   )

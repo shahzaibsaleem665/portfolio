@@ -8,10 +8,10 @@
 }
 .home {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   color: white;
   background: linear-gradient(180deg, #092635,#1B4242);
   overflow: hidden;
@@ -19,12 +19,11 @@
 .home__content{
   display: flex;
   flex-direction: column;
-  width: 70%;
-  height: 100%;
-  margin: auto;
-  justify-content: center;
-  position: absolute;
-  top: 0;
+  width: 50%;
+  height: 50%;
+  margin-top: 10%;
+  margin-left: 14.5%;
+  align-items: left;
   padding: 5px;
   z-index: 1;
 
@@ -46,7 +45,7 @@
 .home__content > p {
   font-family: 'League Spartan';
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 2px;
 }
 .home__buttons{
@@ -63,7 +62,7 @@
   display: flex;
   margin-top: 20px;
   text-transform: none;
-  font-size: 18px;
+  font-size: 20px;
   height: 40px;
 }
 .home__buttons > .contact {
@@ -85,9 +84,10 @@
 }
 .home__backgroundText {
   position: absolute;
-  font-size: 50vh;
-  top: 120px;
+  font-size: 15vh;
+  margin-top: 15%;
   white-space: nowrap;
+  font-weight: normal;
   color: #9ec8b92c;
 
 }
@@ -96,13 +96,110 @@
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:575px) {
+  .home {
+    height: 50vh;
+  }
+  .home__content {
+    margin-top: 3%;
+    width: 80%;
+    margin-left: 7.5%;
+  }
+  .home__content > h2 {
+    font-size: 22px;
+  }
+  .home__content > h1 {
+    font-size: 32px;
+  }
+  .home__content > p {
+    font-size: 16px;
+  }
+  .home__buttons > button {
+    font-size: 16px
+  }
+  .home__backgroundText {
+    font-size: 7vh;
+    margin-top:170px;
+  }
 
 }
 /* for tablets and bigger phones */
-@media screen and (min-width:600px) {
-  
-}
-@media screen and (min-width:768px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* CSS Rules for Mobile Phones in Landscape */
 
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* CSS Rules for Tablets in Portrait */
+  .home {
+    height: 60vh;
+  }
+  .home__content {
+    margin-top: 15%;
+    width: 60%;
+  }
+  .home__content > h2 {
+    font-size: 30px;
+  }
+  .home__content > h1 {
+    font-size: 60px;
+  }
+  .home__content > p {
+    font-size: 18px;
+  }
+  .home__buttons > button {
+    font-size: 16px;
+  }
+  .home__backgroundText {
+    font-size: 10vh;
+    margin-top:220px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* CSS Rules for Tablets in Landscape */
+  .home {
+    height: 80vh;
+  }
+  .home__content {
+    margin-top: 5%;
+    width: 60%;
+  }
+  .home__content > h2 {
+    font-size: 30px;
+  }
+  .home__content > h1 {
+    font-size: 60px;
+  }
+  .home__content > p {
+    font-size: 18px;
+  }
+  .home__buttons > button {
+    font-size: 16px;
+  }
+  .home__backgroundText {
+    font-size: 9vh;
+    margin-top:150px;
+  }
+}
+
+/* Below for latptops and Bigger screens */
+@media (min-width: 1200px) and (max-width:1919px) {
+  .home__content {
+    margin-top: 5%;
+
+  }
+  .home__content > h2 {
+    font-size: 35px;
+  }
+  .home__content > h1 {
+    font-size: 70px;
+  }
+  .home__content > p {
+    font-size: 20px;
+  }
+  .home__buttons > button {
+    font-size: 18px;
+  }
+  .home__backgroundText {
+    font-size: 12vh;
+  }
 }

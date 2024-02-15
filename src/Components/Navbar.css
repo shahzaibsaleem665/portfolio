@@ -6,8 +6,7 @@
    align-items: center;
    width: 100%;
    display: flex;
-
-    
+   z-index: 2;   
 }
 .navbar  > .navbar__content {
     margin: auto;
@@ -18,24 +17,26 @@
 }
 .navbar__content > img {
   height: 60px;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 .navbar__social {
     display: flex;
     gap: 20px;
-    
+    z-index: 2;
+
 }
 .navbar__social > .MuiSvgIcon-root {
     font-size: 30px;
+    cursor: pointer;
 }
 @media screen and (max-width: 600px) 
- {
-        .navbar {
-          
-        }
+{
         
         .navbar__content > img {
-         
+         padding-left: 40px;
+         height: 40px;
         }
         .navbar__social > .MuiSvgIcon-root {
             font-size: 16px;
