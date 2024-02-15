@@ -23,7 +23,8 @@ function Sidebar() {
                 type: "spring",
                 stiffness: 400,
                 damping: 40, 
-            }
+            },
+            marginTop: '10px',
         }
 
 

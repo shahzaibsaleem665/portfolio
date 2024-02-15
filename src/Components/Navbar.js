@@ -37,6 +37,7 @@ function Navbar() {
        <Sidebar />
         <div className="navbar__content">
            <img src={windowWidth < 768 ? logo_m : logo} alt='my logo' onClick={homeNav} />
+           {windowWidth}
             <div className='navbar__social'>
               <Link target='_blank' to={{pathname: 'https://github.com/shahzaibsaleem665'}}>
               <GitHubIcon  />
