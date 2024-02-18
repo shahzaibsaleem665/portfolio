@@ -8,8 +8,19 @@
     justify-content: center;
     gap: 20px;
 }
-a {
+ a {
     font-size: 30px;
     text-decoration: none;
     color: inherit;
+
+}
+
+@media  (max-width:576px) {
+    .items {
+        top: 20px;
+    }
+    .items > a {
+        font-size: 22px;
+       
+    }
 }

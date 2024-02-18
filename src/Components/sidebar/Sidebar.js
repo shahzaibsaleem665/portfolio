@@ -30,8 +30,6 @@ function Sidebar() {
 
     }
 
-
-
   return (
     <motion.div className='sidebar' animate={open ? 'open' : 'closed'}>
     <motion.div className="sidebar__bg" variants={variants}>
