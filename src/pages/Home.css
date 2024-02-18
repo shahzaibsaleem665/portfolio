@@ -96,9 +96,9 @@
 
 
 
-@media screen and (max-width:576px) and (orientation: portrait) {
+@media screen and (min-width:576px) and (orientation: portrait) {
   .home {
-    height: 80vh;
+    height: 70vh;
   }
   .home__content {
     margin-top: 3%;
@@ -154,11 +154,12 @@
 @media screen and (min-width: 577px) and (max-width: 992px) and (orientation: portrait) {
   /* CSS Rules for Tablets in Portrait */
   .home {
-    height: 60vh;
+    height: 90vh;
   }
   .home__content {
-    margin-top: 15%;
-    width: 60%;
+    margin-top: 10%;
+    width: 80%;
+    margin-left: 6%;
   }
   .home__content > h2 {
     font-size: 30px;
@@ -180,11 +181,11 @@
 @media screen and (min-width: 577px) and (max-width: 992px) and (orientation: landscape) {
   /* CSS Rules for Tablets in Landscape */
   .home {
-    height: 80vh;
+    height: 90vh;
   }
   .home__content {
     margin-top: 5%;
-    width: 60%;
+    width: 80%;
   }
   .home__content > h2 {
     font-size: 30px;
@@ -205,13 +206,18 @@
 }
 
 /* Below for latptops and Bigger screens */
-@media (min-width: 1200px) and (max-width:1919px) {
+@media (min-width: 993px) and (max-width:1919px) {
+  .home {
+    height: 100vh;
+  }
   .home__content {
     margin-top: 5%;
+    width: 60%;
 
   }
   .home__content > h2 {
     font-size: 35px;
+
   }
   .home__content > h1 {
     font-size: 70px;
@@ -224,5 +230,34 @@
   }
   .home__backgroundText {
     font-size: 12vh;
+    margin-top: 190px;
   }
+}
+@media (min-width: 1920px)  {
+  .home {
+    height: 100vh;
+  }
+  .home__content {
+    margin-top: 3%;
+    width: 55%;
+
+  }
+  .home__content > h2 {
+    font-size: 40px;
+
+  }
+  .home__content > h1 {
+    font-size: 90px;
+  }
+  .home__content > p {
+    font-size: 22px;
+  }
+  .home__buttons > button {
+    font-size: 20px;
+  }
+  .home__backgroundText {
+    font-size: 13vh;
+    margin-top: 200px;
+
+     }
 }

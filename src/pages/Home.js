@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './Home.css'
 import Navbar from '../Components/Navbar';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt'
@@ -53,7 +53,7 @@ const sliderVariant = {
     <motion.button variants={textVariants} onClick={(e) => history.push('/about')} >About me <ArrowRightAltIcon /></motion.button>
     <motion.button variants={textVariants} className='contact' onClick={(e) => history.push('/contact')} >Contact me <ArrowRightAltIcon /></motion.button>
     </motion.div>
-</motion.div>
+  </motion.div>
 <motion.div className="home__backgroundText" variants={sliderVariant} initial='initial' animate='animate'>
       <motion.h1>Bringing Creative Designs To Life</motion.h1>
     </motion.div>
