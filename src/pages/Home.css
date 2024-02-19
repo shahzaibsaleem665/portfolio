@@ -15,6 +15,8 @@
   color: white;
   background: linear-gradient(180deg, #092635,#1B4242);
   overflow: hidden;
+  overflow-x: hidden;
+
 }
 .home__content{
   display: flex;
@@ -101,7 +103,7 @@
   .home__content {
     margin-top: 3%;
     width: 80%;
-    margin-left: 7.5%;
+    margin-left: 7%;
   }
   .home__content > h2 {
     font-size: 22px;
@@ -130,7 +132,7 @@
   .home__content {
     margin-top: 3%;
     width: 80%;
-    margin-left: 7.5%;
+    margin-left: 6%;
   }
   .home__content > h2 {
     font-size: 22px;
@@ -236,7 +238,7 @@
     height: 100vh;
   }
   .home__content {
-    margin-top: 3%;
+
     width: 55%;
 
   }
@@ -253,9 +255,4 @@
   .home__buttons > button {
     font-size: 20px;
   }
-  .home__backgroundText {
-    font-size: 13vh;
-    margin-top: 200px;
-
-     }
 }
