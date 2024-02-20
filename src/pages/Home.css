@@ -8,12 +8,11 @@
 }
 .home {
   width: 100%;
-  height: calc(100vh - 70px);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: left;
   color: white;
-  background: linear-gradient(180deg, #092635,#1B4242);
   overflow: hidden;
   overflow-x: hidden;
 

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Home from './pages/Home';
+import Main from "./pages/Main";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     <div className="app">
       <Switch>
         <Route path='/'>
-        <Home  />
+        <Main  />
         </Route>
       </Switch>
      

@@ -32,7 +32,7 @@ function Items() {
 
 
   const listItems = [
-    'Home','About' ,'Work','Skills', 'Contact'];
+    'Home', 'Work','Skills',  'About' ,'Contact'];
 
     const handleButtonClick = (item) => {
       setSelectedButton(item);

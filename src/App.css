@@ -1,4 +1,8 @@
 * {
-  top: 0;
-  
+  padding: 0;
+  margin: 0; 
+}
+body {
+  background: linear-gradient(180deg, #092635,#1B4242);
+  color: white;
 }
