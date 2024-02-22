@@ -28,12 +28,13 @@ const textVariants = {
 const sliderVariant = {
   initial: {
     x:0,
+    opacity: 0.2,
   },
   animate: {
-    x:'-150%',
+    opacity: 1,
+    x:'-140%',
     transition:{
       repeat: Infinity,
-      repeatType: 'mirror',
       duration:20,
       staggerChildren:0.01,
     }
@@ -55,6 +56,7 @@ const sliderVariant = {
     <motion.button variants={textVariants} className='contact' onClick={(e) => history.push('/contact')} >Contact me <ArrowRightAltIcon /></motion.button>
     </motion.div>
   </motion.div>
+
 <motion.div className="home__backgroundText" variants={sliderVariant} initial='initial' animate='animate'>
       <motion.h1>Bringing Creative Designs To Life</motion.h1>
     </motion.div>

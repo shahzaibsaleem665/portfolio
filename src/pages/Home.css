@@ -83,6 +83,8 @@
   font-size: 30px !important;
   align-items: center !important;
 }
+
+
 .home__backgroundText {
   position: absolute;
   font-size: 15vh;
@@ -211,7 +213,7 @@
   }
   .home__content {
     margin-top: 5%;
-    width: 60%;
+    width: 45%;
 
   }
   .home__content > h2 {

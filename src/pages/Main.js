@@ -1,7 +1,7 @@
 import React from 'react'
 import './Main.css'
 import Home from './Home'
-import Navbar from '../Components/Navbar'
+import About from './About'
 
 function Main() {
   return (
@@ -11,7 +11,7 @@ function Main() {
         <Home />
         </div>
         <div className="main__section">
-        Work
+        <About />
         </div>
         <div className="main__section">
         Skills
